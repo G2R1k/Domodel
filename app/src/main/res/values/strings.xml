@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Domodel</string>
+    <string name="app_name">Домодел</string>
+    <string name="input_login">Введите логин</string>
+    <string name="input_password">Введите пароль</string>
+    <string name="enter">Вход</string>
+    <string name="errorLogin">Введите верный логин и пароль!</string>
+    <string name="accessLogin">Вы вошли!</string>
+    <string name="title_activity_info">MainActivity</string>
+    <string name="title_home">Новости</string>
+    <string name="title_dashboard">Счетчики</string>
+    <string name="title_notifications">Реквизиты</string>
 </resources>
