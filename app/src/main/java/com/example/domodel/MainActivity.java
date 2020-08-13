@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view) {
             if(checkLoginPassword()){
                 Intent startInfoActivity = new Intent(MainActivity.this, InfoActivity.class);
+                startInfoActivity.putExtra(InfoActivity.LOGIN_KEY, textLogin.getText().toString());
+                startInfoActivity.putExtra(InfoActivity.PASSWORD_KEY, textPassword.getText().toString());
                 startActivity(startInfoActivity);
                 showMsg(R.string.accessLogin);
             } else {

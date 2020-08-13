@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.news.NewsFragment">
+
+    <TextView
+        android:id="@+id/textNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/news_background"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="В субботу в 9.00 состоится собрание у дома председателя для обсуждения необходимости установки шлагбаума"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNews2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="12.30 15.09.20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textNews"
+        app:layout_constraintEnd_toEndOf="@+id/textNews" />
+
+    <TextView
+        android:id="@+id/textNews3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/news_background"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Внимание! Изменились цены на тарифы горячего водоснабжение. Просим ознакомиться с ними в личном кабинете или на сайте управляющей компании. Также придет уведомление по почте."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNews"
+         />
+
+    <TextView
+        android:id="@+id/textNews4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="16.35 12.09.20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textNews3"
+        app:layout_constraintEnd_toEndOf="@+id/textNews3" />
+
+    <TextView
+        android:id="@+id/textNews5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/news_background"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="Следующий снимок сделан в одном из китайских розничных магазинов, на нем мы видим уже знакомое изображение устройства, а также некоторые характеристики."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNews3"
+        />
+
+    <TextView
+        android:id="@+id/textNews6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="13.24 09.08.20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textNews5"
+        app:layout_constraintEnd_toEndOf="@+id/textNews5" />
+
+    <TextView
+        android:id="@+id/textNews7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/news_background"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:text="В этом году компания AMD нанесла по Intel очередной мощный удар, выпустив мобильные APU Ryzen 4000U и Ryzen 4000H. Следующим поколением будут мобильные Ryzen 5000 линейки Cezanne."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNews5"
+        />
+
+    <TextView
+        android:id="@+id/textNews8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="13.24 07.08.20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textNews7"
+        app:layout_constraintEnd_toEndOf="@+id/textNews7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
