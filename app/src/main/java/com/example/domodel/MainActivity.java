@@ -21,6 +21,18 @@ public class MainActivity extends AppCompatActivity {
     EditText textPassword;
     Button btnEnter;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+        textLogin = findViewById(R.id.etLogin2);
+        textPassword = findViewById(R.id.etPassword2);
+        btnEnter = findViewById(R.id.btnEnter);
+
+        btnEnter.setOnClickListener(enterClickListener);
+    }
+
     View.OnClickListener enterClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -35,18 +47,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        textLogin = findViewById(R.id.etLogin2);
-        textPassword = findViewById(R.id.etPassword2);
-        btnEnter = findViewById(R.id.btnEnter);
-
-        btnEnter.setOnClickListener(enterClickListener);
-    }
 
     private boolean checkLoginPassword(){
         return textLogin.getText().toString().equals(LOGIN) && textPassword.getText().toString().equals(PASSWORD);

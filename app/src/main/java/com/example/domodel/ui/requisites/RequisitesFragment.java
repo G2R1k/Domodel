@@ -20,9 +20,11 @@ public class RequisitesFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        requesitiesViewModel =
-                ViewModelProviders.of(this).get(RequesitiesViewModel.class);
+//        requesitiesViewModel =
+//                ViewModelProviders.of(this).get(RequesitiesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_requisites, container, false);
+
+
 //        final TextView textView = root.findViewById(R.id.text_notifications);
 //        requesitiesViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
 //            @Override

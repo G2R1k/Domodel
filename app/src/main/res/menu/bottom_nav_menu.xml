@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/nav_frag_news"
         android:icon="@drawable/ic_event_note_black_48dp"
-        android:title="@string/title_home" />
+        android:title="@string/title_news" />
 
     <item
         android:id="@+id/nav_frag_counter"
         android:icon="@drawable/ic_av_timer_black_48dp"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_counter" />
 
     <item
         android:id="@+id/nav_frag_requisites"
         android:icon="@drawable/ic_folder_open_black_48dp"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_requisites" />
+
+    <item
+        android:id="@+id/nav_frag_request"
+        android:icon="@drawable/ic_build_black_48dp"
+        android:title="@string/title_request" />
 
 </menu>

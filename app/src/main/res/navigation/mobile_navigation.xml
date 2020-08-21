@@ -8,18 +8,25 @@
     <fragment
         android:id="@+id/nav_frag_news"
         android:name="com.example.domodel.ui.news.NewsFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
 
     <fragment
         android:id="@+id/nav_frag_counter"
         android:name="com.example.domodel.ui.counter.CounterFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_counter"
         tools:layout="@layout/fragment_counter" />
 
     <fragment
         android:id="@+id/nav_frag_requisites"
         android:name="com.example.domodel.ui.requisites.RequisitesFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_requisites"
         tools:layout="@layout/fragment_requisites" />
+
+    <fragment
+        android:id="@+id/nav_frag_request"
+        android:name="com.example.domodel.ui.requests.RequestFragment"
+        android:label="@string/title_request"
+        tools:layout="@layout/fragment_requisites" />
+
 </navigation>

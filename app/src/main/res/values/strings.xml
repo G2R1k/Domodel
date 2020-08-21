@@ -6,7 +6,15 @@
     <string name="errorLogin">Введите верный логин и пароль!</string>
     <string name="accessLogin">Вы вошли!</string>
     <string name="title_activity_info">MainActivity</string>
-    <string name="title_home">Новости</string>
-    <string name="title_dashboard">Счетчики</string>
-    <string name="title_notifications">Реквизиты</string>
+    <string name="title_news">Новости</string>
+    <string name="title_counter">Счетчики</string>
+    <string name="title_requisites">Реквизиты</string>
+    <string name="title_request">Заявки</string>
+    <string-array name="questionsRequest">
+        <item>Вопрос 1</item>
+        <item>Вопрос 2</item>
+        <item>Вопрос 3</item>
+        <item>Вопрос 4</item>
+        <item>Другой вопрос</item>
+    </string-array>
 </resources>

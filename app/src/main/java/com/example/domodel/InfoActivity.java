@@ -26,7 +26,7 @@ public class InfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_frag_news, R.id.nav_frag_counter, R.id.nav_frag_requisites)
+                R.id.nav_frag_news, R.id.nav_frag_counter, R.id.nav_frag_requisites, R.id.nav_frag_request)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
