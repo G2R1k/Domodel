@@ -18,15 +18,21 @@
         tools:layout="@layout/fragment_counter" />
 
     <fragment
-        android:id="@+id/nav_frag_requisites"
-        android:name="com.example.domodel.ui.requisites.RequisitesFragment"
-        android:label="@string/title_requisites"
-        tools:layout="@layout/fragment_requisites" />
+        android:id="@+id/nav_frag_payment"
+        android:name="com.example.domodel.ui.payment.PaymentFragment"
+        android:label="@string/title_payment"
+        tools:layout="@layout/fragment_payment" />
 
     <fragment
         android:id="@+id/nav_frag_request"
         android:name="com.example.domodel.ui.requests.RequestFragment"
         android:label="@string/title_request"
-        tools:layout="@layout/fragment_requisites" />
+        tools:layout="@layout/fragment_request" />
+
+    <fragment
+        android:id="@+id/nav_frag_info"
+        android:name="com.example.domodel.ui.requisites.ContactFragment"
+        android:label="@string/title_information"
+        tools:layout="@layout/fragment_contact" />
 
 </navigation>

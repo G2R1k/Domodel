@@ -4,11 +4,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class RequesitiesViewModel extends ViewModel {
+public class ContactViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public RequesitiesViewModel() {
+    public ContactViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("Реквизиты");
     }

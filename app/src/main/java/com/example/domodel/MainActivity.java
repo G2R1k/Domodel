@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    final private String LOGIN = "Dima";
-    final private String PASSWORD = "Ivanov";
+    final private String LOGIN = "user";
+    final private String PASSWORD = "user";
 
     EditText textLogin;
     EditText textPassword;

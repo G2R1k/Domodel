@@ -8,8 +8,10 @@
     <string name="title_activity_info">MainActivity</string>
     <string name="title_news">Новости</string>
     <string name="title_counter">Счетчики</string>
-    <string name="title_requisites">Реквизиты</string>
+    <string name="title_requisites">Инфо</string>
+    <string name="title_payment">Оплата</string>
     <string name="title_request">Заявки</string>
+    <string name="title_information">Информация</string>
     <string-array name="questionsRequest">
         <item>Вопрос 1</item>
         <item>Вопрос 2</item>

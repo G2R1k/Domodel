@@ -1,161 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".ui.requisites.RequisitesFragment">
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Получатель" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="СНТ Юбилейный - 223454563563"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Юридический адрес" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="МО, Ногинский р-н, пос. Воровское, д. 138"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Расчетный счет" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="407084605652154"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="ИНН" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="5007006018"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="КПП" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="5007006018"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="ОГРН" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="1234987540564"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Наименование банка" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="ПАО Сбербанк, г.Москва"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="БИК банка" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="01654618"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="К/р счет" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="301101968465000060"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/textView2"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ООО:" />
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:textSize="@dimen/size_text_req"
+        <Button
+            android:id="@+id/btnToContact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ИНН:" />
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="Контакты" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:textSize="@dimen/size_text_req"
+        <Button
+            android:id="@+id/buttonToReq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="КПП:" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ОГРН:" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Р/С:" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ТОЧКА ПАО БАНКА " />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="БИК:" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="К/С:" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Почта:" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Телефон:" />
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="Реквизиты" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/textView12"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Домодел" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView16"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView17"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ФК ОТКРЫТИЕ" />
-
-        <TextView
-            android:id="@+id/textView18"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView19"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1234567890" />
-
-        <TextView
-            android:id="@+id/textView20"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="goo@gmail.com" />
+        android:layout_width="409dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
             android:id="@+id/textView21"
-            android:textSize="@dimen/size_text_req"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+71234567890" />
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/underline_background" />
     </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

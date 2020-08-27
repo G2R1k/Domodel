@@ -13,13 +13,18 @@
         android:title="@string/title_counter" />
 
     <item
-        android:id="@+id/nav_frag_requisites"
-        android:icon="@drawable/ic_folder_open_black_48dp"
-        android:title="@string/title_requisites" />
+        android:id="@+id/nav_frag_payment"
+        android:icon="@drawable/baseline_credit_card_black_48"
+        android:title="@string/title_payment" />
 
     <item
         android:id="@+id/nav_frag_request"
         android:icon="@drawable/ic_build_black_48dp"
         android:title="@string/title_request" />
+
+    <item
+        android:id="@+id/nav_frag_info"
+        android:icon="@drawable/outline_info_black_48dp"
+        android:title="@string/title_requisites" />
 
 </menu>
