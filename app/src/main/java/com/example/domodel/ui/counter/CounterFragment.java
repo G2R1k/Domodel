@@ -1,6 +1,7 @@
 package com.example.domodel.ui.counter;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,10 +55,16 @@ public class CounterFragment extends Fragment {
     View.OnClickListener listenerSendInfo = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            textNumberCounter.setText("45 685214");
-            textDate.setText(dateText);
-            textCounter.setText(fieldGetInfo.getText().toString());
-            Toast.makeText(getContext(), "Данные отправленны !", Toast.LENGTH_LONG).show();
+            String str = fieldGetInfo.getText().toString();
+            if(!TextUtils.isEmpty(str)){
+                textNumberCounter.setText("45 685214");
+                textDate.setText(dateText);
+                textCounter.setText(fieldGetInfo.getText().toString());
+                Toast.makeText(getContext(), "Данные отправленны !", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getContext(), "Введите данные счетчика", Toast.LENGTH_LONG).show();
+            }
+
         }
     };
 }

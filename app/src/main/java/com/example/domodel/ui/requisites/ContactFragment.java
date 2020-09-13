@@ -22,6 +22,8 @@ public class ContactFragment extends Fragment {
     Button btnOpenRequsities;
     Button btnPhone1;
     Button btnPhone2;
+    Button btnPhone3;
+    Button btnPhone4;
 
     View.OnClickListener listenerContact = new View.OnClickListener() {
         @Override
@@ -48,9 +50,13 @@ public class ContactFragment extends Fragment {
 
         btnPhone1 = root.findViewById(R.id.btnPhone1);
         btnPhone2 = root.findViewById(R.id.btnPhone2);
+        btnPhone3 = root.findViewById(R.id.btnPhone3);
+        btnPhone4 = root.findViewById(R.id.btnPhone4);
 
         btnPhone1.setOnClickListener(listenerDial);
         btnPhone2.setOnClickListener(listenerDial);
+        btnPhone3.setOnClickListener(listenerDial);
+        btnPhone4.setOnClickListener(listenerDial);
 
         btnOpenRequsities = root.findViewById(R.id.buttonToReq);
         btnOpenRequsities.setOnClickListener(listenerContact);

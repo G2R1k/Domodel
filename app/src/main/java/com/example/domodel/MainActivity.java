@@ -1,10 +1,9 @@
 package com.example.domodel;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,10 +11,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.domodel.network.AuthRepo;
+import com.example.domodel.network.AuthRequestModel;
+import com.example.domodel.network.PostAuthModel;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
 
     final private String LOGIN = "user";
     final private String PASSWORD = "user";
+    private PostAuthModel pam;
 
     EditText textLogin;
     EditText textPassword;
@@ -36,17 +44,43 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener enterClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if(checkLoginPassword()){
-                Intent startInfoActivity = new Intent(MainActivity.this, InfoActivity.class);
-                startInfoActivity.putExtra(InfoActivity.LOGIN_KEY, textLogin.getText().toString());
-                startInfoActivity.putExtra(InfoActivity.PASSWORD_KEY, textPassword.getText().toString());
-                startActivity(startInfoActivity);
-                showMsg(R.string.accessLogin);
-            } else {
-                showMsg(R.string.errorLogin);
-            }
+
+            String login = textLogin.getText().toString();
+            String password = textLogin.getText().toString();
+            pam = new PostAuthModel();
+            pam.username = login;
+            pam.password = password;
+            startAuth(pam);
+            //if(checkLoginPassword()){
+          //      showMsg(R.string.accessLogin);
+          //  } else {
+          //      showMsg(R.string.errorLogin);
+            // }
         }
     };
+
+    private void startAuth(PostAuthModel pam2){
+        AuthRepo.getSingleton().getAPI().isAuth(pam2).enqueue(new Callback<AuthRequestModel>() {
+            @Override
+            public void onResponse(@NonNull Call<AuthRequestModel> call,
+                                   @NonNull Response<AuthRequestModel> response) {
+                if (response.body() != null && response.isSuccessful()){
+                    showMsg(R.string.accessLogin);
+                    //textLogin.setText(response.body().token);
+                    Intent startInfoActivity = new Intent(MainActivity.this, InfoActivity.class);
+                    startActivity(startInfoActivity);
+                } else {
+                    showMsg(R.string.errorLogin);
+                }
+
+            }
+            @Override
+            public void onFailure(Call<AuthRequestModel> call, Throwable t) {
+                //showMsg(R.string.errorLogin);
+                Toast.makeText(getApplicationContext(), "Ошибка подключения", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 
     private boolean checkLoginPassword(){
         return textLogin.getText().toString().equals(LOGIN) && textPassword.getText().toString().equals(PASSWORD);

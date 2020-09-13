@@ -25,11 +25,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textNews2"
+        android:id="@+id/dateNews1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="12.30 15.09.20"
+        android:text="12:30 15.09.20"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textNews"
         app:layout_constraintEnd_toEndOf="@+id/textNews" />
@@ -55,11 +55,11 @@
          />
 
     <TextView
-        android:id="@+id/textNews4"
+        android:id="@+id/dateNews2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="16.35 12.09.20"
+        android:text="16:35 12.09.20"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textNews3"
         app:layout_constraintEnd_toEndOf="@+id/textNews3" />
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="13.24 09.08.20"
+        android:text="13:24 09.08.20"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textNews5"
         app:layout_constraintEnd_toEndOf="@+id/textNews5" />
@@ -119,9 +119,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
-        android:text="13.24 07.08.20"
+        android:text="13:24 07.08.20"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textNews7"
         app:layout_constraintEnd_toEndOf="@+id/textNews7" />
+
+    <TextView
+        android:id="@+id/nameAuthor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textNews"
+        app:layout_constraintStart_toStartOf="@+id/textNews"
+        app:layout_constraintTop_toBottomOf="@+id/textNews" />
+
+    <TextView
+        android:id="@+id/nameAuthor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textNews3"
+        app:layout_constraintStart_toStartOf="@+id/textNews3"
+        app:layout_constraintTop_toBottomOf="@+id/textNews3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
