@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.domodel.R;
-import com.example.domodel.network.newsRepo.MainRequestModel;
+import com.example.domodel.network.newsRepo.NewsRequestModel;
 import com.example.domodel.network.newsRepo.OpenInfoRepo;
 
 import retrofit2.Call;
@@ -47,10 +47,10 @@ public class NewsFragment extends Fragment {
 
     private void updateInfo() {
         OpenInfoRepo.getSingleton().getAPI().loadInfo()
-                .enqueue(new Callback<MainRequestModel>() {
+                .enqueue(new Callback<NewsRequestModel>() {
                     @Override
-                    public void onResponse(@NonNull Call<MainRequestModel> call,
-                                           @NonNull Response<MainRequestModel> response) {
+                    public void onResponse(@NonNull Call<NewsRequestModel> call,
+                                           @NonNull Response<NewsRequestModel> response) {
                         if (response.body() != null && response.isSuccessful()) {
                             Toast.makeText(getContext(), "/*Все ок */", Toast.LENGTH_SHORT).show();
                             renderInfo(response.body());
@@ -58,14 +58,14 @@ public class NewsFragment extends Fragment {
                     }
 
                     @Override
-                    public void onFailure(Call<MainRequestModel> call,
+                    public void onFailure(Call<NewsRequestModel> call,
                                           Throwable t) {
                         Toast.makeText(getContext(), "/*Ошибка данных*/", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
 
-    private void renderInfo(MainRequestModel model){
+    private void renderInfo(NewsRequestModel model){
         textNews1.setText(model.shortText);
         dateNews1.setText(model.creationDate);
         nameAuthor1.setText(model.authorName);

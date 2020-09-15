@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.domodel.network.AuthRepo;
-import com.example.domodel.network.AuthRequestModel;
+import com.example.domodel.network.MainAuthReqModel;
 import com.example.domodel.network.PostAuthModel;
 
 import retrofit2.Call;
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private void startAuth(PostAuthModel pam2){
-        AuthRepo.getSingleton().getAPI().isAuth(pam2).enqueue(new Callback<AuthRequestModel>() {
+        AuthRepo.getSingleton().getAPI().isAuth(pam2).enqueue(new Callback<MainAuthReqModel>() {
             @Override
-            public void onResponse(@NonNull Call<AuthRequestModel> call,
-                                   @NonNull Response<AuthRequestModel> response) {
+            public void onResponse(@NonNull Call<MainAuthReqModel> call,
+                                   @NonNull Response<MainAuthReqModel> response) {
                 if (response.body() != null && response.isSuccessful()){
                     showMsg(R.string.accessLogin);
                     //textLogin.setText(response.body().token);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
             @Override
-            public void onFailure(Call<AuthRequestModel> call, Throwable t) {
+            public void onFailure(Call<MainAuthReqModel> call, Throwable t) {
                 //showMsg(R.string.errorLogin);
                 Toast.makeText(getApplicationContext(), "Ошибка подключения", Toast.LENGTH_LONG).show();
             }

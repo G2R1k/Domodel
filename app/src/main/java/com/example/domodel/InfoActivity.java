@@ -33,8 +33,8 @@ public class InfoActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
         Bundle myBundle = getIntent().getExtras();
-        myBundle.getString(LOGIN_KEY);
-        myBundle.getString(PASSWORD_KEY);
+//        myBundle.getString(LOGIN_KEY);
+//        myBundle.getString(PASSWORD_KEY);
     }
 
     @Override
@@ -50,6 +50,10 @@ public class InfoActivity extends AppCompatActivity {
             case R.id.actionLogout:
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
+                break;
+            case R.id.actionProfile:
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

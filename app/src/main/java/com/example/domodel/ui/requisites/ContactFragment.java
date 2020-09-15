@@ -25,6 +25,8 @@ public class ContactFragment extends Fragment {
     Button btnPhone3;
     Button btnPhone4;
 
+    TextView txtPhone1;
+
     View.OnClickListener listenerContact = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -35,7 +37,16 @@ public class ContactFragment extends Fragment {
     View.OnClickListener listenerDial = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String phone = ((TextView)view).getText().toString();
+            String phone;
+            if(view == btnPhone1){
+                phone = txtPhone1.getText().toString();
+            } else if(view == btnPhone2){
+                phone = txtPhone1.getText().toString();
+            } else if(view == btnPhone3){
+                phone = txtPhone1.getText().toString();
+            } else {
+                phone = txtPhone1.getText().toString();
+            }
             Intent startDial = new Intent(Intent.ACTION_DIAL);
             startDial.setData(Uri.parse("tel:" + phone));
             startActivity(startDial);
@@ -52,6 +63,8 @@ public class ContactFragment extends Fragment {
         btnPhone2 = root.findViewById(R.id.btnPhone2);
         btnPhone3 = root.findViewById(R.id.btnPhone3);
         btnPhone4 = root.findViewById(R.id.btnPhone4);
+
+        txtPhone1 = root.findViewById(R.id.txt_contact_phone1);
 
         btnPhone1.setOnClickListener(listenerDial);
         btnPhone2.setOnClickListener(listenerDial);

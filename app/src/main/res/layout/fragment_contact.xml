@@ -24,92 +24,96 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Зам. управляющего"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnPhone1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPhone1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPhone1"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:text="+79095511123"
         app:cornerRadius="20dp"
+        app:icon="@drawable/ic_baseline_phone_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_contact_phone1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        app:layout_constraintTop_toTopOf="@+id/txtNameEmployee1" />
 
     <TextView
         android:id="@+id/txtNameEmployee2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Бухгалтерия"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnPhone2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPhone2"/>
+        app:layout_constraintTop_toBottomOf="@+id/txt_contact_phone1" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPhone2"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="+79525511123"
         app:cornerRadius="20dp"
+        app:icon="@drawable/ic_baseline_phone_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/textView49"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhone1" />
+        app:layout_constraintTop_toTopOf="@+id/txtNameEmployee2" />
 
     <TextView
         android:id="@+id/txtNameEmployee3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Электрик"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnPhone3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPhone3"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView49" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPhone3"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="+79115511123"
         app:cornerRadius="20dp"
+        app:icon="@drawable/ic_baseline_phone_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/textView54"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhone2" />
+        app:layout_constraintTop_toTopOf="@+id/txtNameEmployee3" />
 
     <TextView
         android:id="@+id/txtNameEmployee4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Сантехник"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnPhone4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPhone4"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPhone4"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="+79215511123"
         app:cornerRadius="20dp"
+        app:icon="@drawable/ic_baseline_phone_24"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/textView56"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPhone3" />
+        app:layout_constraintTop_toTopOf="@+id/txtNameEmployee4" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -162,6 +166,62 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_contact_phone1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="+79115553322"
+        android:background="@drawable/profile_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNameEmployee1"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameEmployee1" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        android:text="+79115553322"
+        android:background="@drawable/profile_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNameEmployee2"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameEmployee2" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="+79115553322"
+        android:background="@drawable/profile_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNameEmployee3"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameEmployee3" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:text="+79115553322"
+        android:background="@drawable/profile_background"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtNameEmployee4"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameEmployee4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

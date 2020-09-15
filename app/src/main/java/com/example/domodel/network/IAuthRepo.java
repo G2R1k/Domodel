@@ -6,5 +6,5 @@ import retrofit2.http.POST;
 
 public interface IAuthRepo {
     @POST("api/v1/auth/login")
-    Call<AuthRequestModel> isAuth(@Body PostAuthModel pam);
+    Call<MainAuthReqModel> isAuth(@Body PostAuthModel pam);
 }
