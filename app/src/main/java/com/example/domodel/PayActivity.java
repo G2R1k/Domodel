@@ -22,7 +22,7 @@ public class PayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay);
 
-        btnBack = findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnProfileBack);
         btnBack.setOnClickListener(listenerClose);
     }
 }

@@ -17,6 +17,8 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.domodel.R;
 
+import org.w3c.dom.Text;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,29 +27,20 @@ import java.util.Locale;
 public class CounterFragment extends Fragment {
 
     private CounterViewModel counterViewModel;
-    private Button btnSend;
-    private TextView textNumberCounter;
-    private TextView textDate;
-    private TextView textCounter;
-    private TextView fieldGetInfo;
-    String dateText;
+
+    TextView fldColdWater;
+
+    Button btnSendColdWater;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         counterViewModel =
                 ViewModelProviders.of(this).get(CounterViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_counter, container, false);
-        textNumberCounter = root.findViewById(R.id.textNumberCounter);
-        textDate = root.findViewById(R.id.textDate);
-        textCounter = root.findViewById(R.id.textCounter);
-        fieldGetInfo = root.findViewById(R.id.editTextTextPersonName2);
+        View root = inflater.inflate(R.layout.fragment_counter2, container, false);
 
-        btnSend = root.findViewById(R.id.buttonSend);
-        btnSend.setOnClickListener(listenerSendInfo);
-
-        Date currentDate = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-        dateText = dateFormat.format(currentDate);
+        fldColdWater = root.findViewById(R.id.fldColdWater2);
+        btnSendColdWater = root.findViewById(R.id.btnCounterSend1);
+        btnSendColdWater.setOnClickListener(listenerSendInfo);
         return root;
     }
 
@@ -55,16 +48,8 @@ public class CounterFragment extends Fragment {
     View.OnClickListener listenerSendInfo = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String str = fieldGetInfo.getText().toString();
-            if(!TextUtils.isEmpty(str)){
-                textNumberCounter.setText("45 685214");
-                textDate.setText(dateText);
-                textCounter.setText(fieldGetInfo.getText().toString());
-                Toast.makeText(getContext(), "Данные отправленны !", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(getContext(), "Введите данные счетчика", Toast.LENGTH_LONG).show();
-            }
-
+            String str = fldColdWater.getText().toString();
+            Toast.makeText(getContext(), str, Toast.LENGTH_LONG).show();
         }
     };
 }
