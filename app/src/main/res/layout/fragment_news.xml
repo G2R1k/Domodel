@@ -7,7 +7,7 @@
     tools:context=".ui.news.NewsFragment">
 
     <TextView
-        android:id="@+id/textNews"
+        android:id="@+id/textNews1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,8 +31,8 @@
         android:layout_marginBottom="2dp"
         android:text="12:30 15.09.20"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textNews"
-        app:layout_constraintEnd_toEndOf="@+id/textNews" />
+        app:layout_constraintBottom_toTopOf="@+id/textNews1"
+        app:layout_constraintEnd_toEndOf="@+id/textNews1" />
 
     <TextView
         android:id="@+id/textNews3"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNews"
+        app:layout_constraintTop_toBottomOf="@+id/textNews1"
          />
 
     <TextView
@@ -95,53 +95,73 @@
         app:layout_constraintEnd_toEndOf="@+id/textNews5" />
 
     <TextView
-        android:id="@+id/textNews7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/news_background"
-        android:paddingStart="8dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="4dp"
-        android:text="В этом году компания AMD нанесла по Intel очередной мощный удар, выпустив мобильные APU Ryzen 4000U и Ryzen 4000H. Следующим поколением будут мобильные Ryzen 5000 линейки Cezanne."
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNews5"
-        />
-
-    <TextView
-        android:id="@+id/textNews8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:text="13:24 07.08.20"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textNews7"
-        app:layout_constraintEnd_toEndOf="@+id/textNews7" />
-
-    <TextView
         android:id="@+id/nameAuthor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textNews"
-        app:layout_constraintStart_toStartOf="@+id/textNews"
-        app:layout_constraintTop_toBottomOf="@+id/textNews" />
+        android:layout_marginBottom="2dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textNews1"
+        app:layout_constraintStart_toStartOf="@+id/textNews1" />
 
     <TextView
         android:id="@+id/nameAuthor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textNews3"
-        app:layout_constraintStart_toStartOf="@+id/textNews3"
-        app:layout_constraintTop_toBottomOf="@+id/textNews3" />
+        android:layout_marginBottom="2dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textNews3"
+        app:layout_constraintStart_toStartOf="@+id/textNews3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="Новости" />
+
+        <Button
+            android:id="@+id/buttonToVotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="Голосование" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/underline_background" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+package com.example.domodel.ui.news;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.domodel.R;
+
+public class VotesFragment extends Fragment {
+
+    Button btnToNews;
+
+    public static VotesFragment newInstance() {
+        Bundle args = new Bundle();
+        VotesFragment fragment = new VotesFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View myView = inflater.inflate(R.layout.fragment_votes, container, false);
+        btnToNews = myView.findViewById(R.id.buttonToNews);
+        btnToNews.setOnClickListener(listenerToNews);
+        return myView;
+    }
+
+    View.OnClickListener listenerToNews = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            getFragmentManager().popBackStack();
+        }
+    };
+}

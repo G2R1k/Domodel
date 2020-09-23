@@ -27,6 +27,30 @@ public class ContactFragment extends Fragment {
 
     TextView txtPhone1;
 
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        contactViewModel =
+                ViewModelProviders.of(this).get(ContactViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_contact, container, false);
+
+        btnPhone1 = root.findViewById(R.id.btnPhone1);
+        btnPhone2 = root.findViewById(R.id.btnPhone2);
+        btnPhone3 = root.findViewById(R.id.btnPhone3);
+        btnPhone4 = root.findViewById(R.id.btnPhone4);
+
+        txtPhone1 = root.findViewById(R.id.txt_contact_phone1);
+
+        btnPhone1.setOnClickListener(listenerDial);
+        btnPhone2.setOnClickListener(listenerDial);
+        btnPhone3.setOnClickListener(listenerDial);
+        btnPhone4.setOnClickListener(listenerDial);
+
+        btnOpenRequsities = root.findViewById(R.id.buttonToReq);
+        btnOpenRequsities.setOnClickListener(listenerContact);
+
+        return root;
+    }
+
     View.OnClickListener listenerContact = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -52,28 +76,4 @@ public class ContactFragment extends Fragment {
             startActivity(startDial);
         }
     };
-    
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        contactViewModel =
-                ViewModelProviders.of(this).get(ContactViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_contact, container, false);
-
-        btnPhone1 = root.findViewById(R.id.btnPhone1);
-        btnPhone2 = root.findViewById(R.id.btnPhone2);
-        btnPhone3 = root.findViewById(R.id.btnPhone3);
-        btnPhone4 = root.findViewById(R.id.btnPhone4);
-
-        txtPhone1 = root.findViewById(R.id.txt_contact_phone1);
-
-        btnPhone1.setOnClickListener(listenerDial);
-        btnPhone2.setOnClickListener(listenerDial);
-        btnPhone3.setOnClickListener(listenerDial);
-        btnPhone4.setOnClickListener(listenerDial);
-
-        btnOpenRequsities = root.findViewById(R.id.buttonToReq);
-        btnOpenRequsities.setOnClickListener(listenerContact);
-
-        return root;
-    }
 }

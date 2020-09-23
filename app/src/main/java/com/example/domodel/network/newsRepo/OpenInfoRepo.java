@@ -24,7 +24,7 @@ public class OpenInfoRepo {
 
     private IOpenInfo createAdapter(){
         Retrofit retrofitAdapter = new Retrofit.Builder()
-                .baseUrl("http://domodel.herokuapp.com/")
+                .baseUrl("https://domodel.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
